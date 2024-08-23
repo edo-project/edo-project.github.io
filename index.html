@@ -1,0 +1,1484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vCard - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/avatarku1.png" alt="Richard hanrick" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Richard hanrick">Shonusi Yusufedo Lie</h1>
+          <p class="title">IT Support | Web Developer</p>
+          <br>
+          <div class="container-wave" id="container-wave">
+            <br>
+            <div class="sound-wave">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <audio id="audio" src="./assets/bgm.mp3"></audio>
+          </div>
+          <input class="volume-slider" type="range" id="slider1" min="0" max="100" value="100"/>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:lieedo017@gmail.com" class="contact-link">lieedo017@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">+62 858 4836 6034</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">Juli 05, 1999</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Jl. Rancho Indah No. 21, Jagakarsa, Jakarta Selatan</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <!-- <ul class="social-list">
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul> -->
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Sertifikat</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+          Saya lulusan D3 Teknik Informatika yang memiliki spesialisasi dalam manajemen database dan web developer.
+          Telah mendesain dan mengembangkan 2 sistem untuk meningkatkan efisiensi kerja.
+          </p>
+
+          <p>
+          Memiliki kemampuan problem solving yang baik serta cepat beradaptasi dengan teknologi baru.
+          Komitmen saya adalah untuk terus berkembang dan berkontribusi secara efektif dalam bidang IT.
+          </p>
+         
+          <div class="download-box">
+            <button type="button" class="btn-dl">Download CV</button>
+            </a>
+            <div class="loading-box">
+                <div class="downloading-bar">
+                    <span id="load-bar"></span>
+                </div>
+            </div>
+            <div class="success">
+                <svg class="check" width="25" height="23">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+        </div>
+          
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Design Logo</h4>
+
+                <p class="service-item-text">
+                  Engineering modern, top-notch designs executed with expertise.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                 Designing websites that are a perfect blend of form and function.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Video Editing</h4>
+
+                <p class="service-item-text">
+                  Video editing with passion.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/tool.png" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Maintenance</h4>
+
+                <p class="service-item-text">
+                  Fixing tech troubles one device at a time.
+                </p>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+              
+
+
+        <!--
+          - testimonials
+
+      -->
+
+        <!--<section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry william</h4>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                    lot of experience
+                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                    consectetur adipiscing
+                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+        -->
+    
+
+
+
+        <!--
+          - testimonials modal
+        -->
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+              <time datetime="2021-06-14">14 June, 2021</time>
+
+              <div data-modal-text>
+                <p>
+                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+                  lot of experience
+                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+                  consectetur adipiscing
+                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+                </p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+        
+ 
+
+        <!--
+          - clients
+        -->
+
+        <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/bpjs.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/gorice.png" alt="client logo">
+              </a>
+            </li>
+            
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/modern.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logop.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/ptdiva.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">SMK N 1 Purworejo</h4>
+
+              <span>2016 — 2019</span>
+
+              <p class="timeline-text">
+               Jurusan Teknik Desain Interior dan Furniture.<br><br>
+               Pengalaman Organisasi:<br>
+               1. Anggota Osis 2017<br>
+               2. Anggota Dewan Ambalan Pramuka 2017<br>
+               3. Anggota PMR 2017<br>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Politeknik Sawunggalih Aji</h4>
+
+              <span>2021 - 2024</span>
+
+              <p class="timeline-text">
+                Jurusan Teknik Informatika. <br><br>
+                Pengalaman Organisasi.<br>
+                1. Anggota PMR 2022<br>
+                2. Anggota Himpunan Pecinta Alam 2023
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Work Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Operator Production | Loka Furniture</h4>
+
+              <span>Juni 2018 - Oktober 2018</span>
+
+              <p class="timeline-text">
+                1. Melakukan Perakitan Produk dan Finishing Produk.<br>
+                2. Memeriksa kualitas setiap produk yang telah di produksi untuk memastikan kesesuaian dengan standar perusahaan.
+
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">IT Support Intern | BPJS Kesehatan</h4>
+
+              <span>Juli 2023 - November 2023</span>
+
+              <p class="timeline-text">
+                1. Mengembangkan sistem web berbasis HTML dan CSS untuk manajemen data pendaftaran peserta BPJS.<br>
+                2. Memberikan Bantuan langsung kepada pengguna yang mengalami masalah teknis dengan perangkat keras, perangkat lunak atau jaringan.<br>
+                3. Melakukan pemeliharaan rutin terhadap perangkat keras dan perangkat lunak, termasuk update dan backup data.<br>
+                4. Melakukan instalasi dan konfigurasi perangkat keras komputer baru, perangkat lunak, dan aplikasi.
+              </p>
+
+            </li>
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+              <img src="./assets/images/skills.png">
+             <!-- <div class="title-wrapper">
+                <h5 class="h5">HTML & CSS</h5>
+               
+              </div>
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Bootstrap</h5>
+              </div>
+            </li>
+            
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">MySQL & PHP</h5>
+              </div>
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Javascript</h5>
+              </div>
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Adobe Photoshop</h5>           
+              </div>
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Adobe Premiere Pro</h5>               
+              </div>
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Wordpress</h5>           
+              </div>
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Canva</h5>           
+              </div>
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">MS. Office</h5>           
+              </div>
+            </li> -->
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Showreels</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web Development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <video autoplay loop muted playsinline class="project-video">
+                    <source src="./assets/video/video_project3.mp4" type="video/mp4">
+                  
+                </video>
+                </figure>
+
+                <h3 class="project-title">Food Ordering Website</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                <video autoplay loop muted playsinline class="project-video">
+                    <source src="./assets/video/video_project1.mp4" type="video/mp4">
+                  
+                </video>
+                </figure>
+
+                <h3 class="project-title">GRC Shop</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <video autoplay loop muted playsinline class="project-video">
+                    <source src="./assets/video/video_project2.mp4" type="video/mp4">
+                  
+                </video>
+                </figure>
+
+                <h3 class="project-title">BPJS Member Registration App</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portofolio1.png" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Cover Image</h3>
+
+                <p class="project-category">Design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portofolio2.png" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Poster</h3>
+
+                <p class="project-category">Design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portofolio3.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Book Cover</h3>
+
+                <p class="project-category">Design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portofolio4.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Mockup Product</h3>
+
+                <p class="project-category">Design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="showreels">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <video autoplay loop muted playsinline class="project-video">
+                    <source src="./assets/video/showreels.mp4" type="video/mp4">
+                  
+                </video>
+                </figure>
+
+                <h3 class="project-title">Showreels</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+
+            <li class="project-item  active" data-filter-item data-category="design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portofolio7.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Mockup Product On Blanket</h3>
+
+                <p class="project-category">Design</p>
+
+              </a>
+            </li>
+
+            
+
+            <li class="project-item  active" data-filter-item data-category="design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portofolio6.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Mockup On Vase</h3>
+
+                <p class="project-category">Design</p>
+
+              </a>
+            </li>
+
+       
+
+            <li class="project-item  active" data-filter-item data-category="design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portofolio8.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Pattern On Wall</h3>
+
+                <p class="project-category">Design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portofolio9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Pattern On Wall</h3>
+
+                <p class="project-category">Design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portofolio10.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Mockup On Bilboard</h3>
+
+                <p class="project-category">Design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portofolio5.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Mockup Product On Pillow</h3>
+
+                <p class="project-category">Design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <video autoplay loop muted playsinline class="project-video">
+                    <source src="./assets/video/music_app.mp4" type="video/mp4">
+                  
+                </video>
+                </figure>
+
+                <h3 class="project-title">Music Media Player App</h3>
+
+                <p class="project-category">Web Development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+          <div id="popup-image" class="popup">
+            <span class="close">&times;</span>
+            <img class="popup-content" id="popup-img">
+          </div>
+
+          <div id="popup-video" class="popup">
+            <span class="close">&times;</span>
+            <video id="popup-video-player" controls>
+              <source src="" type="video/mp4">
+            </video>
+          </div>
+          
+          
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="sertifikat">
+
+        <header>
+          <h2 class="h2 article-title">Sertifikat</h2>
+        </header>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/S1.png" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Sertifikat</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">2 Desember, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Webinar Nasional</h3>
+
+                  <p class="blog-text">
+                    Pengelolaan arus kas perushaan
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/s2.png" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Sertifikat</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">4 Maret, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Python Fundamental for Data Science</h3>
+
+                  <p class="blog-text">
+                    DQlab Course Certification
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/s3.png" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Sertifikat</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">4 Maret, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">R Fundamental for Data Science</h3>
+
+                  <p class="blog-text">
+                    DQlab Course Certification
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/s4.png" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Sertifikat</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">4 Maret, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Fundamental SQL Using SELECT Statement</h3>
+
+                  <p class="blog-text">
+                    DQlab Course Certification
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/s5.png" alt="The forgotten art of spacing" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Sertifikat</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">8 Januari, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Network Fundamental</h3>
+
+                  <p class="blog-text">
+                    Aguna Course Certification
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="#">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/s6.png" alt="Design digest #79" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Sertifikat</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">8 Januari, 2022</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Virtual Machine Fundamental</h3>
+
+                  <p class="blog-text">
+                    Aguna Course Certification
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31725.354794012124!2d106.82776730568956!3d-6.307099495647792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ed8e6c8c6927%3A0xa8957802e7316754!2sWest%20Tanjung%2C%20Jagakarsa%2C%20South%20Jakarta%20City%2C%20Jakarta!5e0!3m2!1sen!2sid!4v1723867533322!5m2!1sen!2sid" 
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="text" name="subject" class="form-input" placeholder="Subject" required data-form-input>
+
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" onclick="sendwhatsapp();">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+              <span>Send Message</span>
+            </button>
+  
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    document.getElementById('container-wave').addEventListener('click', function() {
+        var bars = document.querySelectorAll('.sound-wave div');
+        var audio = document.getElementById('audio');
+        
+        bars.forEach(function(bar) {
+            if (bar.classList.contains('playing')) {
+                bar.classList.remove('playing');
+                audio.pause(); // Hentikan audio
+            } else {
+                bar.classList.add('playing');
+                audio.play(); // Putar audio
+            }
+        });
+    });
+  </script>
+
+  <script>
+   var slider1 = document.getElementById("slider1");
+    var audio = document.getElementById("audio");
+
+    slider1.addEventListener("input", function() {
+        var value = slider1.value;
+        audio.volume = value / 100;
+
+        // Ubah warna slider berdasarkan nilai
+        if (value > 75) {
+            slider1.style.background = 'linear-gradient(to right, #0fccce 0%, #ff8e3a 100%)';
+        } else if (value > 50) {
+            slider1.style.background = 'linear-gradient(to right, #9c73f8 0%, #ff8e3a 100%)';
+        } else if (value > 25) {
+            slider1.style.background = 'linear-gradient(to right, #ed509e 0%, #ff8e3a 100%)';
+        } else {
+            slider1.style.background = 'linear-gradient(to right, #ff8e3a 0%, #0fccce 100%)';
+        }
+    });
+
+  </script>
+
+<script>
+  var btn = document.querySelector(".btn-dl");
+  var loading_box = document.querySelector(".loading-box");
+  var load_bar = document.querySelector("#load-bar");
+  var success = document.querySelector(".success");
+
+  btn.addEventListener("click", () => {
+      // Start the loading animation
+      loading_box.style.bottom = "0";
+      loading_box.style.height = "100%";
+      load_bar.style.width = "100%";
+
+      // Show success animation after loading
+      setTimeout(() => {
+          success.style.bottom = "0";
+          success.style.height = "100%";
+      }, 4000); // Adjust this timing to match the length of your animation
+
+      // Open a new window/tab for download after the animation is completed
+      setTimeout(() => {
+          window.open('./assets/images/CV.png');
+      }, 5000); // Adjust this timing to start after the success animation
+  });
+</script>
+
+<script>
+  function sendwhatsapp() {
+    var phonenumber = "+6285848366034";
+
+    var name = document.querySelector("input[name='fullname']").value;
+    var subject = document.querySelector("input[name='subject']").value;
+    var message = document.querySelector("textarea[name='message']").value;
+
+    var url = "https://wa.me/" + phonenumber + "?text="
+      + "*Name :* " + name + "%0a"
+      + "*Subject :* " + subject + "%0a"
+      + "*Message :* " + message
+      + "%0a%0a"
+      + "Dikirim Melalui Form Portofolio";
+
+    window.open(url, '_blank').focus();
+  }
+</script>
+
+  <script>
+  document.querySelectorAll('.project-item-icon-box').forEach(function(icon) {
+    icon.addEventListener('click', function(event) {
+      event.preventDefault();
+      var parentLi = this.closest('li');
+      var imgElement = parentLi.querySelector('img');
+      var videoElement = parentLi.querySelector('video');
+      
+      if (imgElement) {
+        var imgSrc = imgElement.src;
+        var popup = document.getElementById('popup-image');
+        var popupImg = document.getElementById('popup-img');
+        
+        popupImg.src = imgSrc;
+        popup.style.display = "block";
+      } else if (videoElement) {
+        var videoSrc = videoElement.querySelector('source').src;
+        var popup = document.getElementById('popup-video');
+        var popupVideo = document.getElementById('popup-video-player');
+        
+        popupVideo.src = videoSrc;
+        popupVideo.play();  // Auto-play the video in the popup
+        popup.style.display = "block";
+      }
+    });
+  });
+
+  document.querySelectorAll('.close').forEach(function(closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      var popup = this.closest('.popup');
+      var popupVideo = popup.querySelector('video');
+      if (popupVideo) {
+        popupVideo.pause();  // Pause the video when the popup is closed
+        popupVideo.src = "";  // Reset the video source
+      }
+      popup.style.display = "none";
+    });
+  });
+
+  window.addEventListener('click', function(event) {
+    var popup = document.getElementById('popup-image');
+    var popupVideo = document.getElementById('popup-video');
+    if (event.target == popup || event.target == popupVideo) {
+      popup.style.display = "none";
+      popupVideo.style.display = "none";
+    }
+  });
+</script>
+  
+</body>
+
+</html>

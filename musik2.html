@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+  font-family: "Roboto", sans-serif;
+  color: #8b8d8f;
+}
+
+body {
+  background: black;
+}
+
+.player {
+  height: 600px;
+  width: 320px;
+  border-radius: 40px;
+  background: linear-gradient(to bottom, #33383e 0%, #17191d 100%);
+  margin: 0 auto;
+  display: block;
+  border: solid 2px #3e434c;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.indicator {
+  font-size: 10px;
+}
+.small,
+.big,
+.big_play_pause {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  background: radial-gradient(at bottom right, #292e35 0%, #292e34 80%);
+  border: none;
+  box-shadow: -7px -6px 10px 5px rgba(255, 255, 255, 0.04),
+    6px 6px 10px 5px rgb(39, 42, 47);
+  padding: 0;
+}
+
+.big,
+.big_play_pause {
+  height: 60px;
+  width: 60px;
+  box-shadow: -7px -6px 10px 5px rgba(255, 255, 255, 0.04),
+    7px 6px 10px 2px rgb(14, 15, 16);
+  background: radial-gradient(at bottom right, #17191e 0%, #1d2025 80%);
+}
+
+.big_play_pause {
+  background: radial-gradient(at top left, #c92711 0%, #ea570a 80%);
+}
+.inner_button,
+.center,
+.inner_button_big,
+.playpause {
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  background: radial-gradient(
+    at top left,
+    rgba(46, 50, 58, 1) 0%,
+    rgba(28, 30, 35, 1) 80%
+  );
+  margin: 0 auto;
+  border: none;
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+  /* align-self: center; */
+  align-items: center;
+}
+
+.inner_button_big {
+  height: 55px;
+  width: 55px;
+  background: radial-gradient(
+    at top left,
+    rgb(57, 59, 64) 0%,
+    rgb(12, 13, 16) 112%
+  );
+}
+
+.playpause {
+  background: radial-gradient(at bottom right, #c92711 0%, #ea570a 80%);
+  height: 55px;
+  width: 55px;
+}
+
+.small:active {
+  transform: translateY(2px);
+  background: radial-gradient(at top left, #292e35 0%, #292e34 80%);
+}
+.inner_button:active {
+  background: radial-gradient(
+    at bottom right,
+    rgba(46, 50, 58, 1) 0%,
+    rgba(28, 30, 35, 1) 80%
+  );
+}
+.big_play_pause:active {
+  transform: translateY(4px);
+  background: radial-gradient(at bottom right, #c92711 0%, #ea570a 80%);
+}
+.playpause:active {
+  background: radial-gradient(at top left, #c92711 0%, #ea570a 80%);
+}
+
+.big:active {
+  transform: translateY(4px);
+  background: radial-gradient(at top left, #17191e 0%, #1d2025 80%);
+}
+.inner_button_big:active {
+  background: radial-gradient(
+    at bottom right,
+    rgb(57, 59, 64) 0%,
+    rgb(12, 13, 16) 112%
+  );
+}
+
+.center {
+  height: 220px;
+  width: 220px;
+  box-shadow: -15px -10px 16px 5px rgba(255, 255, 255, 0.04),
+    10px 10px 16px 8px rgb(24, 26, 29);
+  background: radial-gradient(at top left, rgba(28, 30, 35, 1) 0%, #131416 85%);
+}
+
+.album {
+  border-radius: 50%;
+  height: 205px;
+  width: 205px;
+  object-fit: cover;
+}
+
+.song_details {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 30px 0px 30px;
+}
+
+.slider {
+  margin: 20px auto;
+  width: 70%;
+}
+
+.slider_bar {
+  background: black;
+  height: 6px;
+
+  border-radius: 5px;
+  margin: 0 auto;
+  box-shadow: inset -2px -2px 2px 0px rgb(66, 70, 74),
+    inset 1px 1px 1px -1px rgb(0, 0, 0);
+}
+
+.inner_slider_bar {
+  width: 60%;
+  height: 4px;
+  background: radial-gradient(at top left, #c92711 0%, #ffc107 90%);
+  margin: 0px 1px;
+  border-radius: 5px;
+}
+.time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 7px;
+  margin-bottom: 5px;
+}
+.description{
+  line-height : 1.5;
+  margin : 20px
+}
+    </style>
+</head>
+<body>
+      
+    <div>
+      <div class="player">
+        <audio id="audio-player"></audio>
+        <div class="top">
+          <button class="small">
+            <div class="inner_button">
+              <img style="height: 10px;" src="data:image/svg+xml;base64,
+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ5MiA0OTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ5MiA0OTI7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+PGc+PGc+Cgk8Zz4KCQk8cGF0aCBkPSJNNDY0LjM0NCwyMDcuNDE4bDAuNzY4LDAuMTY4SDEzNS44ODhsMTAzLjQ5Ni0xMDMuNzI0YzUuMDY4LTUuMDY0LDcuODQ4LTExLjkyNCw3Ljg0OC0xOS4xMjQgICAgYzAtNy4yLTIuNzgtMTQuMDEyLTcuODQ4LTE5LjA4OEwyMjMuMjgsNDkuNTM4Yy01LjA2NC01LjA2NC0xMS44MTItNy44NjQtMTkuMDA4LTcuODY0Yy03LjIsMC0xMy45NTIsMi43OC0xOS4wMTYsNy44NDQgICAgTDcuODQ0LDIyNi45MTRDMi43NiwyMzEuOTk4LTAuMDIsMjM4Ljc3LDAsMjQ1Ljk3NGMtMC4wMiw3LjI0NCwyLjc2LDE0LjAyLDcuODQ0LDE5LjA5NmwxNzcuNDEyLDE3Ny40MTIgICAgYzUuMDY0LDUuMDYsMTEuODEyLDcuODQ0LDE5LjAxNiw3Ljg0NGM3LjE5NiwwLDEzLjk0NC0yLjc4OCwxOS4wMDgtNy44NDRsMTYuMTA0LTE2LjExMmM1LjA2OC01LjA1Niw3Ljg0OC0xMS44MDgsNy44NDgtMTkuMDA4ICAgIGMwLTcuMTk2LTIuNzgtMTMuNTkyLTcuODQ4LTE4LjY1MkwxMzQuNzIsMjg0LjQwNmgzMjkuOTkyYzE0LjgyOCwwLDI3LjI4OC0xMi43OCwyNy4yODgtMjcuNnYtMjIuNzg4ICAgIEM0OTIsMjE5LjE5OCw0NzkuMTcyLDIwNy40MTgsNDY0LjM0NCwyMDcuNDE4eiIgZGF0YS1vcmlnaW5hbD0iIzAwMDAwMCIgY2xhc3M9ImFjdGl2ZS1wYXRoIiBzdHlsZT0iZmlsbDojODQ4NzhBIiBkYXRhLW9sZF9jb2xvcj0iIzAwMDAwMCI+PC9wYXRoPgoJPC9nPgo8L2c+PC9nPiA8L3N2Zz4=">
+            </div>
+          </button>
+          <p class="indicator">PLAYING NOW</p>
+          <button class="small">
+            <div class="inner_button">
+              <img style="height: 10px;" src="data:image/svg+xml;base64,
+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGlkPSJMYXllcl8xIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiPjxnPjxwYXRoIGQ9Im00NjQuODgzIDY0LjI2N2gtNDE3Ljc2NmMtMjUuOTggMC00Ny4xMTcgMjEuMTM2LTQ3LjExNyA0Ny4xNDkgMCAyNS45OCAyMS4xMzcgNDcuMTE3IDQ3LjExNyA0Ny4xMTdoNDE3Ljc2NmMyNS45OCAwIDQ3LjExNy0yMS4xMzcgNDcuMTE3LTQ3LjExNyAwLTI2LjAxMy0yMS4xMzctNDcuMTQ5LTQ3LjExNy00Ny4xNDl6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiM4NDg3OEEiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+PHBhdGggZD0ibTQ2NC44ODMgMjA4Ljg2N2gtNDE3Ljc2NmMtMjUuOTggMC00Ny4xMTcgMjEuMTM2LTQ3LjExNyA0Ny4xNDkgMCAyNS45OCAyMS4xMzcgNDcuMTE3IDQ3LjExNyA0Ny4xMTdoNDE3Ljc2NmMyNS45OCAwIDQ3LjExNy0yMS4xMzcgNDcuMTE3LTQ3LjExNyAwLTI2LjAxMy0yMS4xMzctNDcuMTQ5LTQ3LjExNy00Ny4xNDl6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiM4NDg3OEEiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+PHBhdGggZD0ibTQ2NC44ODMgMzUzLjQ2N2gtNDE3Ljc2NmMtMjUuOTggMC00Ny4xMTcgMjEuMTM3LTQ3LjExNyA0Ny4xNDkgMCAyNS45OCAyMS4xMzcgNDcuMTE3IDQ3LjExNyA0Ny4xMTdoNDE3Ljc2NmMyNS45OCAwIDQ3LjExNy0yMS4xMzcgNDcuMTE3LTQ3LjExNyAwLTI2LjAxMi0yMS4xMzctNDcuMTQ5LTQ3LjExNy00Ny4xNDl6IiBkYXRhLW9yaWdpbmFsPSIjMDAwMDAwIiBjbGFzcz0iYWN0aXZlLXBhdGgiIHN0eWxlPSJmaWxsOiM4NDg3OEEiIGRhdGEtb2xkX2NvbG9yPSIjMDAwMDAwIj48L3BhdGg+PC9nPiA8L3N2Zz4=">
+            </div>
+          </button>
+        </div>
+
+        <div class="center">
+          <img class="album" id="current-song-image">
+        </div>
+
+        <div class="song_details" id="current-song-title">
+          <div style="font-size: 20px;"></div>
+          <div style="margin-top: 7px;font-size: 10px;"></div>
+        </div>
+
+        <div class="slider">
+          <div class="time">
+            <div>1:17</div>
+            <div>2:46</div>
+          </div>
+          <div class="slider_bar">
+            <div class="inner_slider_bar"></div>
+          </div>
+
+        </div>
+
+        <div class="controls">
+          <button class="big">
+            <div class="inner_button_big">
+              <img style="height: 15px; transform: scale(-1);" src="data:image/svg+xml;base64,
+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDQ4IDQ0OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQ4IDQ0ODsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48Zz48cGF0aCBkPSJNNDM5Ljg0LDIxMC4wNDJsLTI1Ni0xNDRjLTQuOTI4LTIuNzUyLTExLjAwOC0yLjcyLTE1LjkwNCwwLjEyOFMxNjAsNzQuMjk4LDE2MCw3OS45OTR2NjIuNTkyTDIzLjg0LDY2LjA0MiAgYy00Ljk2LTIuNzg0LTExLjAwOC0yLjcyLTE1LjkzNiwwLjEyOEMzLjAwOCw2OS4wNSwwLDc0LjI5OCwwLDc5Ljk5NHYyODhjMCw1LjY5NiwzLjAwOCwxMC45NDQsNy45MDQsMTMuODI0ICBjMi40OTYsMS40NCw1LjMxMiwyLjE3Niw4LjA5NiwyLjE3NmMyLjY4OCwwLDUuNDA4LTAuNjcyLDcuODQtMi4wNDhMMTYwLDMwNS40MDJ2NjIuNTkyYzAsNS42OTYsMy4wNCwxMC45NDQsNy45MzYsMTMuODI0ICBzMTAuOTc2LDIuOTEyLDE1LjkwNCwwLjEyOGwyNTYtMTQ0YzUuMDI0LTIuODQ4LDguMTYtOC4xNiw4LjE2LTEzLjk1MlM0NDQuODY0LDIxMi44OSw0MzkuODQsMjEwLjA0MnoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6Izg0ODc4QSIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD48L2c+IDwvc3ZnPg==">
+            </div>
+          </button>
+          <button class="big_play_pause">
+            <div class="playpause">
+              <img style="height: 15px;" src="data:image/svg+xml;base64,
+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMzIwLjAwMSAzMjAuMDAxIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMjAuMDAxIDMyMC4wMDE7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjUxMiI+PGc+PHBhdGggZD0iTTI5NS44NCwxNDYuMDQ5bC0yNTYtMTQ0Yy00Ljk2LTIuNzg0LTExLjAwOC0yLjcyLTE1LjkwNCwwLjEyOEMxOS4wMDgsNS4wNTcsMTYsMTAuMzA1LDE2LDE2LjAwMXYyODggIGMwLDUuNjk2LDMuMDA4LDEwLjk0NCw3LjkzNiwxMy44MjRjMi40OTYsMS40NCw1LjI4LDIuMTc2LDguMDY0LDIuMTc2YzIuNjg4LDAsNS40MDgtMC42NzIsNy44NC0yLjA0OGwyNTYtMTQ0ICBjNS4wMjQtMi44NDgsOC4xNi04LjE2LDguMTYtMTMuOTUyUzMwMC44NjQsMTQ4Ljg5NywyOTUuODQsMTQ2LjA0OXoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6I0ZGRkZGRiIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD48L2c+IDwvc3ZnPg==">
+            </div>
+          </button>
+          <button class="big">
+            <div class="inner_button_big">
+              <img style="height: 15px;" src="data:image/svg+xml;base64,
+PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgNDQ4IDQ0OCIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDQ4IDQ0ODsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIj48Zz48cGF0aCBkPSJNNDM5Ljg0LDIxMC4wNDJsLTI1Ni0xNDRjLTQuOTI4LTIuNzUyLTExLjAwOC0yLjcyLTE1LjkwNCwwLjEyOFMxNjAsNzQuMjk4LDE2MCw3OS45OTR2NjIuNTkyTDIzLjg0LDY2LjA0MiAgYy00Ljk2LTIuNzg0LTExLjAwOC0yLjcyLTE1LjkzNiwwLjEyOEMzLjAwOCw2OS4wNSwwLDc0LjI5OCwwLDc5Ljk5NHYyODhjMCw1LjY5NiwzLjAwOCwxMC45NDQsNy45MDQsMTMuODI0ICBjMi40OTYsMS40NCw1LjMxMiwyLjE3Niw4LjA5NiwyLjE3NmMyLjY4OCwwLDUuNDA4LTAuNjcyLDcuODQtMi4wNDhMMTYwLDMwNS40MDJ2NjIuNTkyYzAsNS42OTYsMy4wNCwxMC45NDQsNy45MzYsMTMuODI0ICBzMTAuOTc2LDIuOTEyLDE1LjkwNCwwLjEyOGwyNTYtMTQ0YzUuMDI0LTIuODQ4LDguMTYtOC4xNiw4LjE2LTEzLjk1MlM0NDQuODY0LDIxMi44OSw0MzkuODQsMjEwLjA0MnoiIGRhdGEtb3JpZ2luYWw9IiMwMDAwMDAiIGNsYXNzPSJhY3RpdmUtcGF0aCIgc3R5bGU9ImZpbGw6Izg0ODc4QSIgZGF0YS1vbGRfY29sb3I9IiMwMDAwMDAiPjwvcGF0aD48L2c+IDwvc3ZnPg==">
+            </div>
+          </button>
+        </div>
+        <div class="upload-section">
+            <input type="file" id="song-input" accept="audio/*" multiple>
+            <input type="file" id="image-input" accept="image/*">
+            <button id="add-song">Add Song</button>
+        </div>
+
+        <ul id="playlist"></ul>
+      
+    </div>
+    </div>
+
+    <script>
+        const audioPlayer = document.getElementById('audio-player');
+        const currentSongTitle = document.getElementById('current-song-title');
+        const currentSongImage = document.getElementById('current-song-image');
+        const songInput = document.getElementById('song-input');
+        const imageInput = document.getElementById('image-input');
+        const addSongButton = document.getElementById('add-song');
+        const playlist = document.getElementById('playlist');
+
+        let songs = [];
+
+        addSongButton.addEventListener('click', () => {
+            const files = songInput.files;
+            const imageFile = imageInput.files[0];
+
+            if (files.length > 0 && imageFile) {
+                for (let i = 0; i < files.length; i++) {
+                    const song = files[i];
+                    const imageURL = URL.createObjectURL(imageFile);
+
+                    // Ensure the file is an audio file
+                    if (song.type.startsWith('audio/')) {
+                        songs.push({
+                            title: song.name,
+                            url: URL.createObjectURL(song),
+                            image: imageURL
+                        });
+                    }
+                }
+
+                // Clear file inputs
+                songInput.value = '';
+                imageInput.value = '';
+
+                updatePlaylist();
+            } else {
+                alert('Please select at least one audio file and one image file.');
+            }
+        });
+
+        function updatePlaylist() {
+            playlist.innerHTML = '';
+
+            if (songs.length === 0) {
+                playlist.innerHTML = '<li>No songs in the playlist</li>';
+                return;
+            }
+
+            songs.forEach((song, index) => {
+                const li = document.createElement('li');
+                li.textContent = song.title;
+                li.addEventListener('click', () => {
+                    playSong(index);
+                });
+                playlist.appendChild(li);
+            });
+        }
+
+        function playSong(index) {
+            const song = songs[index];
+            audioPlayer.src = song.url;
+            currentSongTitle.textContent = song.title;
+            currentSongImage.src = song.image;
+            audioPlayer.play();
+        }
+    </script>
+  </body>
+</html>
