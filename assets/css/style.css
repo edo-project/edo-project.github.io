@@ -310,6 +310,7 @@ main {
 
 
 
+
 /*-----------------------------------*\
   #SIDEBAR
 \*-----------------------------------*/
@@ -317,11 +318,30 @@ main {
 .sidebar {
   margin-bottom: 15px;
   max-height: 112px;
-  overflow: hidden;
+  overflow: auto;
   transition: var(--transition-2);
 }
 
-.sidebar.active { max-height: 405px; }
+.sidebar.active {
+  max-height: 405px;
+}
+
+/* Kustomisasi scrollbar */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent; /* Membuat scrollbar transparan */
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.145); /* Thumb scrollbar dengan transparansi */
+  border-radius: 4px;
+}
+
+/* Untuk browser Firefox */
+.sidebar {
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+  scrollbar-width: thin;
+}
 
 .sidebar-info {
   position: relative;
@@ -379,12 +399,18 @@ main {
 }
 
 .info_more-btn:hover,
-.info_more-btn:focus { background: var(--bg-gradient-yellow-1); }
+.info_more-btn:focus {
+  background: var(--bg-gradient-yellow-1);
+}
 
 .info_more-btn:hover::before,
-.info_more-btn:focus::before { background: var(--bg-gradient-yellow-2); }
+.info_more-btn:focus::before {
+  background: var(--bg-gradient-yellow-2);
+}
 
-.info_more-btn span { display: none; }
+.info_more-btn span {
+  display: none;
+}
 
 .sidebar-info_more {
   opacity: 0;
@@ -427,7 +453,9 @@ main {
   font-size: var(--fs-7);
 }
 
-.contact-info address { font-style: normal; }
+.contact-info address {
+  font-style: normal;
+}
 
 .social-list {
   display: flex;
@@ -443,11 +471,9 @@ main {
   font-size: 18px;
 }
 
-
-.social-item .social-link:hover { color: var(--light-gray); }
-
-
-
+.social-item .social-link:hover {
+  color: var(--light-gray);
+}
 
 
 /*-----------------------------------*\
